@@ -10,6 +10,9 @@ COPY package*.json ./
 # 의존성 설치
 RUN npm install
 
+# TypeScript 설치 - root 권한으로 설치해야 함
+RUN npm install -g typescript
+
 # 소스 코드 복사
 COPY . .
 
