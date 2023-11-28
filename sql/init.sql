@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS news (
+    title VARCHAR(255) NOT NULL,
+    contents TEXT[] NOT NULL,
+    added_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    link VARCHAR(255)
+    );

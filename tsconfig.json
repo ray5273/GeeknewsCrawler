@@ -8,7 +8,8 @@
     "esModuleInterop": true,                  // default export가 없는 모듈을 위한 지원을 활성화
     "skipLibCheck": true,                     // 선언 파일의 타입 체킹을 건너뛰기
     "forceConsistentCasingInFileNames": true, // 대소문자가 일치하지 않는 파일 참조를 금지
-    "sourceMap": true                         // 소스맵 파일 생성 여부
+    "sourceMap": true,                         // 소스맵 파일 생성 여부
+    "noImplicitAny": true,                    // 암묵적 any 타입을 허용하지 않음
   },
   "include": [
     "src/**/*"                               // 컴파일할 TypeScript 파일들의 패턴

@@ -1,4 +1,6 @@
 import { parseRSSFeed } from './rssFeedParser';
+import { queryDatabase} from "./database";
+
 function timeoutPromise(promise: Promise<void>, ms: number | undefined) {
     let timeoutId: string | number | NodeJS.Timeout | undefined;
     const timeout = new Promise((_, reject) => {
@@ -26,3 +28,6 @@ const feedUrl = 'https://news.hada.io/rss/news'; // 실제 RSS 피드 URL로 대
 timeoutPromise(parseRSSFeed(feedUrl), 10000) // 10초 타임아웃
     .then(() => console.log('RSS 피드 읽기 완료'))
     .catch(error => console.error('An error occurred:', error));
+
+
+queryDatabase();
