@@ -11,3 +11,10 @@ services:
       - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
+  # Grafana
+  dashboard:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
